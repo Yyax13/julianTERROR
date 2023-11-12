@@ -49,29 +49,33 @@ else:
         print(f"{c.red('Falha no login. Status code:')} ", c.red(resposta.status_code))
         print(resposta.text) 
 
+def do_excel(user, local, name):
+    conn = mysql.connector.connect(
+    host=f"{local}",
+    user=f"{user}",
+    password=f"{user}",
+    database="portal"
+    )
 
-conn = mysql.connector.connect(
- host="localhost",
- user="yyax",
- password="yyax",
- database="portal"
-)
 
+    cursor = conn.cursor()
 
-cursor = conn.cursor()
+    cursor.execute("SELECT * FROM liberacao")
 
-cursor.execute("SELECT * FROM liberacao")
+    results = cursor.fetchall()
 
-results = cursor.fetchall()
+    wb = openpyxl.Workbook()
 
-wb = openpyxl.Workbook()
+    ws = wb.active
 
-ws = wb.active
+    for row in results:
+    ws.append(row)
 
-for row in results:
- ws.append(row)
+    wb.save(f"{name}.xlsx")
 
-wb.save("liberacao.xlsx")
+    cursor.close()
+    conn.close()
 
-cursor.close()
-conn.close()
+do_excel("yyax", "localhost", "liberacao")
+do_excel("root", "192.168.5.1", "liberacao_root")
+do_excel("yyax", "127.0.0.1", "liberacao1")
