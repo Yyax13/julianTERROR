@@ -1,6 +1,5 @@
 import os
 import subprocess
-from misc import loading as Carregante
 
 def pip(package):
     try:
