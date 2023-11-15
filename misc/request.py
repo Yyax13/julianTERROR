@@ -1,4 +1,3 @@
-import requests
 import random as r
 import time
 import random
