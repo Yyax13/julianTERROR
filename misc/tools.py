@@ -1,7 +1,6 @@
 import os
 import yollor
 import sys
-
 def reset():
     python = sys.executable
     os.execl(python, python, *sys.argv)

