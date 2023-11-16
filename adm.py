@@ -74,6 +74,7 @@ class AdmApp:
             self.enable_menu_buttons()
         else:
             messagebox.showerror("Erro de Autenticação", "Credenciais de administrador inválidas.")
+            tools.sair()
 
     def enable_menu_buttons(self):
         # Ativa os botões do menu após a autenticação
@@ -88,6 +89,7 @@ class AdmApp:
         prints.banner()
 
 if __name__ == "__main__":
+    print("iniciando painel administrador")
     root = tk.Tk()
     app = AdmApp(root)
     root.mainloop()
