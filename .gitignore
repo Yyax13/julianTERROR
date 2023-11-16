@@ -1,2 +1,4 @@
 .vscode
+misc/__pycache__/*
+.vscode/*
 misc/__pycache__
