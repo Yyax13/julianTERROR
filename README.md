@@ -34,5 +34,5 @@ Star pls
 - software
   ```
   OS: Anyone
-  Python: 3.11.x+ (anaconda)
+  Python: 3.11.x+ 
   ```
