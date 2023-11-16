@@ -113,7 +113,7 @@ if __name__ == "__main__":
         time.sleep(2)
         tools.sair()
     elif autenticar == "ADM":
-        adm()
+        tools.opem('adm.py')
     else:
         print(c.yellow('ERRO DURANTE AUTH. REINICIANDO'))
         time.sleep(2)

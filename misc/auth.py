@@ -44,8 +44,23 @@ def delete(user):
         print("Usuário não existe.")
         return
     
-    if input(f"Deseja realmente deletar {user} (s/n)? ") in ['s', 'S', 'y', 'Y']:
-        cur.execute("DELETE FROM users WHERE user=?", (user,))
+    cur.execute("DELETE FROM users WHERE user=?", (user,))
+    con.commit()
+
+
+
+def change_password(user, new_password):
+    cur.execute("SELECT * FROM users WHERE user=?", (user,))
+    usuario = cur.fetchone()
+
+    if usuario:
+        cur.execute("UPDATE users SET passwd=? WHERE user=?", (new_password, user))
         con.commit()
+        print(f"Senha do usuário {user} alterada com sucesso.")
     else:
-        pass
+        print("Usuário não encontrado.")
+
+def get_user_data_list():
+    cur.execute("SELECT user, passwd FROM users")
+    user_data_list = cur.fetchall()
+    return user_data_list

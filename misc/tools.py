@@ -11,3 +11,6 @@ def sair():
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+def opem(arquivo):
+        os.system(f"python {arquivo}.py")
