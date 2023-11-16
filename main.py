@@ -85,19 +85,21 @@ def main():
 def adm():
     tools.clear()
     prints.banner()
-    AdmOPT = input(f"""
-        {t.tagn1_yellow} {c.cyan('Criar usuario')}
-        {t.tagn2_yellow} {c.cyan('Deletar usuario')}
-        
-        {t.quest_yellow} {c.cyan('Selecione uma')} {c.yellow('opção')}{c.cyan(':')} """)
-    if AdmOPT == '1':
-        auth.newUser(user=input(f"{t.hashtag_yellow} {c.cyan('Insira o usuario: ')}"), password=input(f"{t.hashtag_yellow} {c.cyan('Insira a senha: ')}"))
-    elif AdmOPT == '2':
-        auth.delete(user=input(f"{t.hashtag_yellow} {c.cyan('Insira o usuario a ser deletado: ')}"))
+    if input("Deseja abrir o app com GUI (s/n)? ").lower() == 's':
+        tools.open("adm.py")
     else:
-        print(c.yellow("Erro, selecione uma opção valida. reiniciando"))
-        tools.reset()
-
+        AdmOPT = input(f"""
+            {t.tagn1_yellow} {c.cyan('Criar usuario')}
+            {t.tagn2_yellow} {c.cyan('Deletar usuario')}
+            
+            {t.quest_yellow} {c.cyan('Selecione uma')} {c.yellow('opção')}{c.cyan(':')} """)
+        if AdmOPT == '1':
+            auth.newUser(user=input(f"{t.hashtag_yellow} {c.cyan('Insira o usuario: ')}"), password=input(f"{t.hashtag_yellow} {c.cyan('Insira a senha: ')}"))
+        elif AdmOPT == '2':
+            auth.delete(user=input(f"{t.hashtag_yellow} {c.cyan('Insira o usuario a ser deletado: ')}"))
+        else:
+            print(c.yellow("Erro, selecione uma opção valida. reiniciando"))
+            tools.reset()
 if __name__ == "__main__":
     auth.create()
     tools.clear()
