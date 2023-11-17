@@ -179,11 +179,124 @@ def tryes(wordlist, school):
         'senha': 'dcj68*'
     }
 }
-
+    CSJB_pwd = {
+    'Julian Tessaro Lopes': {
+        'login': 'julian.cnsn',
+        'senha': 'yyax123'
+    },
+    'Adriana Márcia Willig Bérti': {
+        'login': 'adriana_berti',
+        'senha': 'yyax123'
+    },
+    'Adriane BEN EDC CUL C IR S J BATISTA E STA CAT S M': {
+        'login': 'mdadm1402',
+        'senha': 'yyax123'
+    },
+    'Agda Menegat Renosto': {
+        'login': 'agda.renosto',
+        'senha': 'yyax123'
+    },
+    'Ana Cristina Tassinari Ignacio Bertussi': {
+        'login': 'ana_bertussi',
+        'senha': 'yyax123'
+    },
+    'Camila de Quadros Silvestrin': {
+        'login': 'camila.silvestrin',
+        'senha': 'yyax123'
+    },
+    'Carla Coloda': {
+        'login': 'carla_coloda',
+        'senha': 'yyax123'
+    },
+    'Carla Lima Rocha Manosso': {
+        'login': '80858520044',
+        'senha': 'yyax123'
+    },
+    'Cristina Ferreira Ribeiro': {
+        'login': 'cristina_ribeiro',
+        'senha': 'yyax123'
+    },
+    'Tatiana Daugeller de Lima': {
+        'login': 'tatiana.lima',
+        'senha': 'yyax123'
+    },
+    'Tatiane Louruan Brazil Froés da Silva': {
+        'login': 'tatiane.froes',
+        'senha': 'yyax123'
+    },
+    'Thiago Bach': {
+        'login': 'thiagobach',
+        'senha': 'yyax123'
+    }
+}
+    ENSA_pwd = {
+    'Adriana Pimenta Almeida Alves': {
+        'login': 'adriana22081975',
+        'senha': 'yyax123'
+    },
+    'Alessandra Caetano': {
+        'login': 'alessandra.caetano',
+        'senha': 'yyax123'
+    },
+    'Aline Alves Vale Mamede': {
+        'login': 'aline12475505',
+        'senha': 'yyax123'
+    },
+    'Andréia Macedo Alves Freitas': {
+        'login': 'andreia12373561',
+        'senha': 'yyax123'
+    },
+    'Angélica Andrade Rezende': {
+        'login': 'angelica12373562',
+        'senha': 'yyax123'
+    },
+    'Claudia Caetano Medeiros Moura': {
+        'login': 'claudia12373565',
+        'senha': 'yyax123'
+    },
+    'Cristiane Mendes Santos Freitas': {
+        'login': 'cristiane12373566',
+        'senha': 'yyax123'
+    },
+    'Dhayane Barreto da Silva Sena': {
+        'login': 'ds09514687',
+        'senha': 'yyax123'
+    },
+    'Eliete Maria Rodrigues Pereira': {
+        'login': 'eliete12373569',
+        'senha': 'yyax123'
+    },
+    'Fabiana Aparecida Vilela Andrade': {
+        'login': 'fabiana12373571',
+        'senha': 'yyax123'
+    },
+    'Geise Silva Salvino': {
+        'login': 'geise12475494',
+        'senha': 'yyax123'
+    },
+    'Ir. Miriam Silva Souza': {
+        'login': 'miriam.cnsn',
+        'senha': 'yyax123'
+    },
+    'Julian Tessaro Lopes': {
+        'login': 'julian.cnsn',
+        'senha': 'yyax123'
+    },
+    'Keully Gois Oliveira': {
+        'login': 'keully12373574',
+        'senha': 'yyax123'
+    },
+    'Letícia Macedo de Campos': {
+        'login': 'leticia12373575',
+        'senha': 'yyax123'
+    }
+}
     if school == "CNSN":
         pwd = CNSN_pwd
-    else:
-        return "porra barth"
+    elif school == "CSJB":
+        pwd = CSJB_pwd
+    elif school == "ENAS":
+        pwd = ENSA_pwd
     while True:
         tr = r.choice(wordlist)
         if tr in pwd:

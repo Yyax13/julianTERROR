@@ -6,7 +6,7 @@ Star pls
 
 ## Install & Dependence
 - python
-> any other dependencies will be auto installed
+- any other dependencies will be auto installed
 
 ## Use
 - for admins
